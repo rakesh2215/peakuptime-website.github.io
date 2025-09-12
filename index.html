@@ -1,200 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="google-site-verification" content="2rA3Io1WWHgmhKXrFk1Sqy-AI9FR7mEApU7HXtZZwWo" />
-
-    <!-- Page title -->
-    <title>Cloud WiFi Management for Co-Working Spaces</title>
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
-
-    <!-- Vendor styles -->
-    <link rel="stylesheet" href="./css/font-awesome.css">
-    <link rel="stylesheet" href="./css/metisMenu.css">
-    <link rel="stylesheet" href="./css/animate.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-
-    <!-- App styles -->
-    <link rel="stylesheet" href="./fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
-    <link rel="stylesheet" href="./fonts/pe-icon-7-stroke/css/helper.css">
-    <link rel="stylesheet" href="./css/style.css">		
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PeakUptime – Network Reliability Made Simple</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-gray-50 text-gray-800">
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/58cbaca4a8edb309fadfdba8/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
-<body class="landing-page">
-
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header" style="margin-top:18px">
-            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-<style>
-@font-face {
-  font-family: 'Variane';
-  src: url('./fonts/Variane.ttf') format('truetype');
-}
-.highlight {
-	font-family: 'Variane';
-	color: #62cb31;
-	font-weight: 100 !important;
-	font-size: 1.2em !important;
-}
-img.shadow {
-	box-shadow: 5px 10px 10px #888888;
-}
-img.bottom-space {
-	margin-bottom:40px
-}
-</style>
-           <a href="http://griggi.com" target="_blank">
-               <img style="height: 3em; float: left; border-radius: 0.2em; margin-right: 1em; margin-top:-10px" src="/images/router.png" alt="">
-               <span style="font-size: 3em; font-family: 'Variane'; font-weight: 100; color: #62cb31;">Griggi</span>
-           </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <!--<li class="active"><a class="page-scroll" href="#">Home</a></li>
-                <li><a class="page-scroll" page-scroll="" href="#how-it-works">How it Works</a></li>
-                <li><a class="page-scroll" page-scroll="" href="#features">Features</a></li>
-                <li><a class="page-scroll" page-scroll="" href="#contact">Questions ?</a></li> -->
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="http://app.griggi.com" class="btn btn-success navbar-brand" >Login</a></li>
-                <li><a href="http://griggi.com/privacy_policy.html">Privacy Policy</a></li>
-            </ul>
-        </div>
+  <!-- Navbar -->
+  <header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-xl font-bold text-indigo-600">PeakUptime.io</h1>
+      <nav class="space-x-6">
+        <a href="#features" class="hover:text-indigo-600">Features</a>
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
     </div>
-</nav>
+  </header>
 
-	<div class="modal fade hmodal-success" id="my-modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="color-line"></div>
-              <div class="modal-body">
-								<div id="get-started-step-1">
-									<h4 class="text-center text-success">Griggi for business is out</h4>
-                  <p>First version of our software is out. But is <b>not completely DIY (short form for 'do it yourself')</b>. It is aimed at shared spaces like cafes, hotels, PGs (Paying Guests), coworking spaces etc.</p>
-                  <p>We are passing 50% of revenue that we make from the sale if you could refer us to one of the above mentioned establishement owner & he/she ends up installing Griggi at his premise.</p>
-								</div>
-							</div>
-							<div class="modal-footer">
-										<a href="/wifi-business-solution-cafe-restaurant-coworking-space/" class="btn btn-primary">Read More</a>
-							</div>
-          </div>
+  <!-- Hero Section -->
+  <section class="max-w-6xl mx-auto px-4 py-20 text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+      Keep Your <span class="text-indigo-600">Network</span> at Peak Uptime
+    </h2>
+    <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+      Monitor, diagnose, and optimize coworking space Wi-Fi with ease.  
+      Built for small teams that care about speed, reliability, and happy users.
+    </p>
+    <div class="mt-8 flex justify-center space-x-4">
+      <a href="#contact" class="px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">Get Started</a>
+      <a href="#features" class="px-6 py-3 rounded-lg border border-indigo-600 text-indigo-600 font-semibold hover:bg-indigo-50 transition">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4 grid gap-10 md:grid-cols-3">
+      <div class="text-center">
+        <div class="text-indigo-600 mb-4 text-4xl">📡</div>
+        <h3 class="font-semibold text-lg">Smart Monitoring</h3>
+        <p class="text-gray-600 mt-2">Track uptime, latency, and bandwidth usage in real time.</p>
       </div>
-  </div>
-
-
-<header id="page-top" style="background: url('../images/landing/header.jpg') 50% 0 repeat-y !important; height: auto !important; padding-bottom: 10px">
-    <div class="container">
-        <div class="heading text-center" style="margin-top:30px;">
-            <h1>
-              Get control of your WiFi/internet
-            </h1>
-            <p>Griggi lets you control your internet without needing expensive hardware & sys-admins</p>
-						<ul style="text-align:left; max-width:600px; margin: auto; margin-bottom: 20px; margin-top: 20px">
-	        <li>Manage your internet from anywhere using <span class="text-success">Griggi Cloud Router</span></li> 
-                <li><span class="text-success">Multi-ISP</span> support with speed monitor. Plug in multiple ISPs & get <span class="text-success">100% uptime</span></li>
-                <li><span class="text-success">Network Access Control</span> with data,speed and device limits at user level</li>
-                <li>Get <span class="text-success">alerts</span> into inbox before user complaint</li>
-                <li>Automatic <span class="text-success">traffic prioritization</span> prevents download, youtube or torrents from hogging your bandwidth</li>
-						</ul>
-            <div class="alert alert-warning" style="max-width: 600px; margin:10px auto; text-align:left">
-                <i class="fa fa-bolt fa-2x" style="padding-right:20px"></i> 24x7 support for any issue with your Network<br/>
-                <i class="fa fa-bolt fa-2x" style="padding-right:20px"></i> Tested to support 5 to 500 users at ISP speed of 1 Gbps<br/>
-                <i class="fa fa-thumbs-up fa-2x" style="padding-right:10px"></i> Totally free 2 weeks demo (router cost refunded post demo)<br/>
-            </div>
-          <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLSeXuO7z8wvZoOfG7vuXXpfUWMRlnweqE8L4RYT283KeOrgpaQ/viewform" class="btn btn-danger btn-lg">Learn More</a> -->
-          <a href="http://app.griggi.com/contactus" class="btn btn-danger btn-lg">Request Demo</a>
-            <!--<a href="#how-it-works" class="btn btn-primary btn-lg page-scroll">Learn More</a>-->
-        </div>
+      <div class="text-center">
+        <div class="text-indigo-600 mb-4 text-4xl">⚡</div>
+        <h3 class="font-semibold text-lg">Fast Deployment</h3>
+        <p class="text-gray-600 mt-2">Get started in minutes with free hardware & easy setup.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-indigo-600 mb-4 text-4xl">🔒</div>
+        <h3 class="font-semibold text-lg">Secure by Default</h3>
+        <p class="text-gray-600 mt-2">Enterprise-grade firewall + remote management built-in.</p>
+      </div>
     </div>
-</header>
-<div class="pull-right"><a href="/sitemap.html">Sitemap</a></div>
-<!-- Vendor scripts -->
-<script src="./js/jquery.min.js"></script>
-<script src="./js/jquery-ui.min.js"></script>
-<script src="./js/jquery.slimscroll.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/metisMenu.min.js"></script>
-<script src="./js/icheck.min.js"></script>
-<script src="./js/index.js"></script>
-<script src="./js/jquery.highlight.js"></script>
-<script src="./js/jquery.cookie.js"></script>
-<script src="./js/jquery.flexverticalcenter.js"></script>
+  </section>
 
-<!-- Local script for menu handle -->
-<!-- It can be also directive -->
-<script>
-    $(document).ready(function () {
+  <!-- About -->
+  <section id="about" class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-2xl font-bold mb-4">Why PeakUptime?</h3>
+      <p class="text-gray-600">
+        We simplify network reliability for coworking spaces.  
+        Stop firefighting — start predicting.  
+        PeakUptime is your “Fitbit for the network.”
+      </p>
+    </div>
+  </section>
 
-        // Page scrolling feature
-        $('a.page-scroll').bind('click', function(event) {
-            var link = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(link.attr('href')).offset().top - 50
-            }, 500);
-            event.preventDefault();
-        });
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-2xl font-bold mb-4">Let’s Talk</h3>
+      <p class="text-gray-600 mb-6">Drop us a note — we’ll get back within 24 hrs.</p>
+      <form class="grid gap-4 max-w-md mx-auto">
+        <input type="text" placeholder="Your name" class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <input type="email" placeholder="Your email" class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <textarea rows="4" placeholder="Message" class="px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        <button class="px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">Send</button>
+      </form>
+    </div>
+  </section>
 
-        $('body').scrollspy({
-            target: '.navbar-fixed-top',
-            offset: 80
-        });
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 mt-12 text-center text-sm text-gray-500">
+    © <span id="year"></span> PeakUptime.io — All rights reserved.
+  </footer>
 
-				/*$('li').highlight('Griggi');
-				$('p').highlight('Griggi');
-				$('span').highlight('Griggi');
-				$('a').highlight('Griggi');
-				$('h3').highlight('Griggi');*/
-
-				if ($.cookie("get-started-step-1-done")) {
-					$("#get-started-step-1").hide();
-					$("#get-started-step-2").show();
-					$(".modal-footer").hide();
-				}
-				$(".vertical-center").flexVerticalCenter();
-				$(".get-started").click(function() {
-						if (!$.cookie("get-started-step-1-done"))
-							mixpanel.track('get-started')
-						$("#my-modal").modal()
-				})
-    });
-</script>
-
-<script>
-	function showNext(option) {
-		mixpanel.track(option)
-		$.cookie("get-started-step-1-done", 1);
-		if (option == "not-interested")
-			$("#my-modal").modal('hide')
-		$("#get-started-step-1").hide();
-		$("#get-started-step-2").show();
-		$(".modal-footer").hide();
-	}
-</script>
-
-
-
-</body></html>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
