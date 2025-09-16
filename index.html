@@ -48,26 +48,29 @@
   </div>
 
   <!-- Mobile nav (hidden by default) -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-    <div class="flex flex-col space-y-2 px-4 py-4">
-      <div class="relative group">
-        <button class="w-full text-left flex items-center justify-between font-medium hover:text-indigo-600">
-          Products
-          <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-        <!-- Dropdown for mobile -->
-        <div class="hidden group-hover:block mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg">
-          <a href="firewall.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Multi-Gigabit Firewall</a>
-          <a href="monitoring.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Monitoring</a>
-        </div>
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+  <div class="flex flex-col space-y-2 px-4 py-4">
+    <!-- Products with click-to-toggle -->
+    <div class="relative">
+      <button id="mobile-products-btn" class="w-full text-left flex items-center justify-between font-medium hover:text-indigo-600">
+        Products
+        <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <!-- Hidden by default -->
+      <div id="mobile-products-menu" class="hidden mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg">
+        <a href="firewall.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Multi-Gigabit Firewall</a>
+        <a href="monitoring.html" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Monitoring</a>
       </div>
-      <a href="#features" class="hover:text-indigo-600">Features</a>
-      <a href="#about" class="hover:text-indigo-600">About</a>
-      <a href="#contact" class="hover:text-indigo-600">Contact</a>
     </div>
+
+    <!-- Other nav links -->
+    <a href="#features" class="hover:text-indigo-600">Features</a>
+    <a href="#about" class="hover:text-indigo-600">About</a>
+    <a href="#contact" class="hover:text-indigo-600">Contact</a>
   </div>
+</div>
 </header>
 
 <script>
