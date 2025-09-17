@@ -55,20 +55,3 @@
     </div>
   </div>
 </header>
-
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const productsBtn = document.getElementById('mobile-products-btn');
-  const productsMenu = document.getElementById('mobile-products-menu');
-  const productsIcon = document.getElementById('mobile-products-icon');
-
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-  productsBtn.addEventListener('click', () => {
-    productsMenu.classList.toggle('hidden');
-    productsIcon.classList.toggle('rotate-180');
-  });
-</script>
