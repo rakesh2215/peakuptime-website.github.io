@@ -1,122 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pricing – PeakUptime</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PeakUptime – Pricing</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Navbar -->
-<div id="header-placeholder"></div>
-<script>
-  fetch('header.html') <!-- drop the leading slash -->
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById('header-placeholder').innerHTML = html;
+  <!-- Header (injected) -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('./header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
 
-      // Re-bind after injection
-      const menuBtn = document.getElementById('menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const productsBtn = document.getElementById('mobile-products-btn');
-      const productsMenu = document.getElementById('mobile-products-menu');
-      const productsIcon = document.getElementById('mobile-products-icon');
+        // Re-bind menu actions
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const productsBtn = document.getElementById('mobile-products-btn');
+        const productsMenu = document.getElementById('mobile-products-menu');
+        const productsIcon = document.getElementById('mobile-products-icon');
 
-      if (menuBtn) {
-        menuBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-        });
-      }
+        if (menuBtn) {
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
 
-      if (productsBtn) {
-        productsBtn.addEventListener('click', () => {
-          productsMenu.classList.toggle('hidden');
-          productsIcon.classList.toggle('rotate-180');
-        });
-      }
-    });
-</script>
+        if (productsBtn) {
+          productsBtn.addEventListener('click', () => {
+            productsMenu.classList.toggle('hidden');
+            productsIcon.classList.toggle('rotate-180');
+          });
+        }
+      });
+  </script>
 
   <!-- Hero -->
-  <section class="text-center py-16 bg-indigo-600 text-white">
-    <h2 class="text-3xl md:text-4xl font-extrabold">Simple, Transparent Pricing</h2>
-    <p class="mt-4 text-lg">Zero hardware cost. Pay monthly, cancel anytime.</p>
+  <section class="max-w-6xl mx-auto px-4 py-20 text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+      24x7 <span class="text-indigo-600">WiFi Uptime.</span> No Excuses.
+    </h2>
+    <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+      WiFi that just works. Monitor ISPs & speeds, Access Points, CCTV/NVR, and every user — 
+      so you can fix issues <span class="font-semibold text-indigo-600">before anyone complains</span>.
+    </p>
   </section>
 
-  <!-- Pricing cards -->
-  <section class="max-w-6xl mx-auto px-4 grid gap-8 md:grid-cols-2 py-12">
-    <!-- Firewall -->
-    <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-8 text-center relative">
-      <span class="absolute top-4 left-1/2 -translate-x-1/2 inline-block px-3 py-1 text-xs font-semibold text-white bg-indigo-600 rounded-full">
-        Includes Monitoring
-      </span>
-      <h3 class="text-xl font-bold text-indigo-600 mt-8 mb-4">Firewall</h3>
-      <p class="text-gray-600 mb-6">
-        Multi-gigabit firewall service. <strong>Includes full Monitoring.</strong> Hardware included at no cost.
-      </p>
-      <div class="text-3xl font-extrabold mb-6">₹5999<span class="text-lg font-medium text-gray-500"> /mo</span></div>
-      <ul class="text-left text-sm text-gray-600 mb-6 space-y-2 max-w-xs mx-auto">
-        <li>✔ Multi-gigabit throughput (2.5G/5G-ready)</li>
-        <li>✔ Dual-WAN & policy routing</li>
-        <li>✔ Per-user bandwidth control</li>
-        <li>✔ Proactive WhatsApp alerts</li>
-        <li>✔ Zero-touch cloud provisioning</li>
-        <li>✔ All Monitoring features included</li>
-      </ul>
-      <a href="https://wa.me/919538155667?text=Hi%20PeakUptime%20—%20I%27m%20interested%20in%20Firewall%20plan"
-         target="_blank" rel="noopener"
-         class="inline-block px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">
-        Get Started
-      </a>
-    </div>
+  <!-- Pricing -->
+  <section class="max-w-6xl mx-auto px-4 py-20 text-center">
+    <h3 class="text-3xl font-extrabold text-gray-900 mb-12">Simple, Transparent Pricing</h3>
 
-    <!-- Monitoring -->
-    <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-8 text-center">
-      <h3 class="text-xl font-bold text-indigo-600 mb-4">Monitoring</h3>
-      <p class="text-gray-600 mb-6">
-        24x7 monitoring of ISPs, APs, CCTV/NVRs, and users. Hardware included at no cost.
-      </p>
-      <div class="text-3xl font-extrabold mb-6">₹2999<span class="text-lg font-medium text-gray-500"> /mo</span></div>
-      <ul class="text-left text-sm text-gray-600 mb-6 space-y-2 max-w-xs mx-auto">
-        <li>✔ ISP uptime & SLA tracking</li>
-        <li>✔ Access point health & client load</li>
-        <li>✔ CCTV/NVR online status</li>
-        <li>✔ Per-user usage reports</li>
-        <li>✔ Proactive WhatsApp alerts</li>
-      </ul>
-      <a href="https://wa.me/919538155667?text=Hi%20PeakUptime%20—%20I%27m%20interested%20in%20Monitoring%20plan"
-         target="_blank" rel="noopener"
-         class="inline-block px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">
-        Get Started
-      </a>
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Firewall plan -->
+      <div class="flex flex-col p-8 bg-white shadow-lg rounded-xl">
+        <h4 class="text-xl font-bold text-indigo-600 mb-4">Firewall</h4>
+        <p class="text-gray-600 mb-6">Includes Monitoring + Firewall, zero hardware cost.</p>
+        <p class="text-3xl font-extrabold text-gray-900 mb-6">
+          ₹5,999<span class="text-lg font-medium text-gray-500">/mo</span>
+        </p>
+
+        <!-- Push button to bottom -->
+        <a href="#contact" class="mt-auto px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Monitoring plan -->
+      <div class="flex flex-col p-8 bg-white shadow-lg rounded-xl">
+        <h4 class="text-xl font-bold text-indigo-600 mb-4">Monitoring</h4>
+        <p class="text-gray-600 mb-6">Proactive monitoring, zero hardware cost.</p>
+        <p class="text-3xl font-extrabold text-gray-900 mb-6">
+          ₹2,999<span class="text-lg font-medium text-gray-500">/mo</span>
+        </p>
+
+        <!-- Push button to bottom -->
+        <a href="#contact" class="mt-auto px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">
+          Get Started
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Comparison Table -->
-  <section id="comparison" class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-bold text-center mb-6">Firewall vs Monitoring</h2>
-    <div class="overflow-x-auto shadow-sm rounded-lg border border-gray-200">
-      <table class="w-full text-left text-sm">
-        <thead class="bg-gray-100 text-gray-700">
-          <tr>
-            <th class="py-3 px-4">Feature</th>
-            <th class="py-3 px-4">Firewall</th>
-            <th class="py-3 px-4">Monitoring</th>
-          </tr>
-        </thead>
-        <tbody class="bg-white divide-y divide-gray-200">
-          <tr><td class="py-3 px-4">Price</td><td class="py-3 px-4 font-semibold text-indigo-600">₹5999/mo</td><td class="py-3 px-4 font-semibold text-indigo-600">₹2999/mo</td></tr>
-          <tr><td class="py-3 px-4">Hardware cost</td><td class="py-3 px-4">0 (included)</td><td class="py-3 px-4">0 (included)</td></tr>
-          <tr><td class="py-3 px-4">Multi-gigabit WAN/LAN</td><td class="py-3 px-4">✔</td><td class="py-3 px-4">—</td></tr>
-          <tr><td class="py-3 px-4">Dual-WAN / Failover</td><td class="py-3 px-4">✔</td><td class="py-3 px-4">—</td></tr>
-          <tr><td class="py-3 px-4">Per-user controls</td><td class="py-3 px-4">✔ (QoS, shaping)</td><td class="py-3 px-4">✔ (usage reports)</td></tr>
-          <tr><td class="py-3 px-4">Access point health</td><td class="py-3 px-4">✔</td><td class="py-3 px-4">✔ Detailed monitoring</td></tr>
-          <tr><td class="py-3 px-4">CCTV / NVR monitoring</td><td class="py-3 px-4">✔</td><td class="py-3 px-4">✔</td></tr>
-          <tr><td class="py-3 px-4">ISP uptime & SLA</td><td class="py-3 px-4">✔</td><td class="py-3 px-4">✔</td></tr>
-          <tr><td class="py-3 px-4">Proactive alerts</td><td class="py-3 px-4">✔ WhatsApp notifications</td><td class="py-3 px-4">✔ WhatsApp notifications</td></tr>
-        </tbody>
-      </table>
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-2xl font-bold mb-4">Let’s Talk</h3>
+      <p class="text-gray-600 mb-6">Fastest way to reach us — WhatsApp. We reply within minutes.</p>
+      <div class="flex flex-col items-center gap-4">
+        <a href="https://wa.me/919538155667?text=Hi%20PeakUptime%20%E2%80%94%20I%27m%20interested%20in%20Pricing"
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">
+          <span>💬</span>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -126,7 +106,7 @@
   </footer>
 
   <!-- Sticky WhatsApp bubble -->
-  <a href="https://wa.me/919538155667?text=Hi%20PeakUptime%20—%20I%27m%20interested%20in%20your%20plans"
+  <a href="https://wa.me/919538155667?text=Hi%20PeakUptime%20%E2%80%94%20I%27m%20interested%20in%20Pricing"
      target="_blank" rel="noopener"
      class="fixed bottom-6 right-6 rounded-full shadow-lg px-5 py-3 bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">
     WhatsApp
