@@ -9,155 +9,132 @@
 
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Header include -->
+  <!-- Header -->
   <div id="header-placeholder"></div>
   <script>
-    fetch('header.html')
+    fetch("header.html")
       .then(res => res.text())
       .then(html => {
-        document.getElementById('header-placeholder').innerHTML = html;
+        document.getElementById("header-placeholder").innerHTML = html;
 
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const productsBtn = document.getElementById('mobile-products-btn');
-        const productsMenu = document.getElementById('mobile-products-menu');
-        const productsIcon = document.getElementById('mobile-products-icon');
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const productsBtn = document.getElementById("mobile-products-btn");
+        const productsMenu = document.getElementById("mobile-products-menu");
+        const productsIcon = document.getElementById("mobile-products-icon");
 
-        if (menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-        if (productsBtn) productsBtn.addEventListener('click', () => {
-          productsMenu.classList.toggle('hidden');
-          productsIcon.classList.toggle('rotate-180');
-        });
+        if (menuBtn)
+          menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+        if (productsBtn)
+          productsBtn.addEventListener("click", () => {
+            productsMenu.classList.toggle("hidden");
+            productsIcon.classList.toggle("rotate-180");
+          });
       });
   </script>
 
-  <!-- HERO -->
-  <section class="bg-indigo-600 text-white py-20 text-center">
-    <h1 class="text-4xl font-extrabold">About PeakUptime</h1>
-    <p class="mt-4 text-lg opacity-90">
-      Reliable connectivity for coworking spaces. Built with engineering discipline.
+  <!-- Hero -->
+  <section class="max-w-6xl mx-auto px-4 py-20 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+      The People Behind <span class="text-indigo-600">PeakUptime</span>
+    </h1>
+    <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+      12 years working with coworking spaces.  
+      20 years building and debugging networks.  
+      One simple belief: <span class="font-semibold text-indigo-600">WiFi should just work.</span>
     </p>
   </section>
 
-  <!-- MAIN CONTENT -->
-  <section class="max-w-6xl mx-auto px-6 py-20 space-y-20">
-
-    <!-- Mission -->
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Mission</h2>
-        <p class="text-gray-600 leading-relaxed text-lg">
-          PeakUptime ensures that coworking spaces run on stable, predictable
-          internet — free from sudden outages, mystery drops, and ISP surprises.
-        </p>
-        <p class="mt-4 text-gray-600 leading-relaxed text-lg">
-          We monitor ISPs, access points, CCTV/NVRs, and client activity,
-          giving you a clear picture of your network at all times.
-        </p>
-      </div>
-
-      <div class="bg-white shadow-lg rounded-xl p-8 border border-gray-200">
-        <div class="flex items-center gap-4">
-          <span class="w-12 h-12 bg-indigo-600 text-white rounded-xl flex items-center justify-center text-2xl font-bold">
-            ⌁
-          </span>
-          <h3 class="text-xl font-semibold text-gray-800">Built for Reliability</h3>
-        </div>
-        <p class="mt-4 text-gray-600">
-          Consistency over hype. Real monitoring, real uptime, real impact.
-        </p>
-      </div>
-    </div>
-
-    <!-- Why We Exist -->
-    <div class="bg-gradient-to-br from-indigo-50 to-white rounded-2xl p-12 shadow-inner border border-gray-200">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">Why We Exist</h2>
-      <p class="text-gray-600 leading-relaxed text-lg max-w-3xl">
-        For most teams, WiFi is the office’s lifeline. Still, diagnosing issues
-        takes hours — and coworking admins aren't network engineers.
-        PeakUptime removes this burden entirely:
+  <!-- Section 1: Our Background -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">Our Background</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Before PeakUptime existed, we spent over a decade inside real coworking spaces —  
+        fixing outages, stabilizing APs, managing ISP chaos, and keeping networks alive  
+        when offices got busy at 11 AM.
       </p>
 
-      <div class="grid md:grid-cols-2 gap-6 mt-8">
-        <div class="flex items-start gap-3">
-          <span class="text-indigo-600 text-xl">✔</span>
-          <p class="text-gray-700 text-lg">Real-time monitoring of every ISP and access point</p>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="text-indigo-600 text-xl">✔</span>
-          <p class="text-gray-700 text-lg">Automatic WhatsApp alerts when anything breaks</p>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="text-indigo-600 text-xl">✔</span>
-          <p class="text-gray-700 text-lg">Detailed histories of uptime, load, users, and speeds</p>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="text-indigo-600 text-xl">✔</span>
-          <p class="text-gray-700 text-lg">Zero hardware cost — appliance included</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Engineering Discipline -->
-    <div class="grid md:grid-cols-3 gap-10">
-      <div class="md:col-span-1">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Built With Engineering Discipline</h2>
-        <p class="text-gray-600 leading-relaxed text-lg">
-          PeakUptime is built by engineers with deep experience in networking,
-          embedded systems, and real-time monitoring.
-        </p>
-      </div>
-
-      <div class="md:col-span-2 grid sm:grid-cols-2 gap-6">
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h4 class="text-lg font-semibold text-indigo-600">Real Data</h4>
-          <p class="mt-2 text-gray-600 text-sm leading-relaxed">
-            Every insight is backed by actual network signals. No guesswork.
-          </p>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h4 class="text-lg font-semibold text-indigo-600">Low Noise</h4>
-          <p class="mt-2 text-gray-600 text-sm leading-relaxed">
-            Alerts only when needed. No spam. No unnecessary “warnings.”
-          </p>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h4 class="text-lg font-semibold text-indigo-600">Edge Monitoring</h4>
-          <p class="mt-2 text-gray-600 text-sm leading-relaxed">
-            Our hardware appliance tracks your ISP and LAN from inside the network.
-          </p>
-        </div>
-
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-          <h4 class="text-lg font-semibold text-indigo-600">Uptime First</h4>
-          <p class="mt-2 text-gray-600 text-sm leading-relaxed">
-            We care about one thing: keeping your office online.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Who Uses -->
-    <div class="text-center">
-      <h2 class="text-3xl font-bold text-gray-800 mb-4">Who Uses PeakUptime?</h2>
-      <p class="text-gray-600 leading-relaxed text-lg max-w-3xl mx-auto">
-        PeakUptime is deployed across coworking spaces in Bangalore — tracking
-        internet health, sending automated alerts, and helping admins stay ahead
-        of issues instead of reacting to them.
+      <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+        The founders bring <span class="font-semibold text-indigo-600">20+ years of networking experience</span>  
+        across enterprise systems, embedded devices, and real-time monitoring.
       </p>
     </div>
+  </section>
 
+  <!-- Section 2: Philosophy -->
+  <section class="py-20 bg-indigo-600 text-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-extrabold mb-6">Our Philosophy</h2>
+
+      <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 shadow-lg">
+        <p class="text-lg leading-relaxed">
+          We like networks that are <span class="font-semibold text-yellow-300">predictable, visible, and boring</span>.
+        </p>
+        <p class="mt-4 text-lg leading-relaxed">
+          No drama. No mysteries. No guessing.  
+          Just uptime that feels effortless for the entire workspace.
+        </p>
+        <p class="mt-4 text-lg leading-relaxed">
+          PeakUptime exists because coworking admins shouldn’t spend hours diagnosing  
+          issues that could have been spotted instantly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: What We Believe -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-10">What We Believe</h2>
+
+      <div class="grid gap-10 md:grid-cols-2">
+
+        <div class="bg-white shadow-lg rounded-xl p-8 border border-gray-200 text-center">
+          <div class="text-4xl mb-4 text-indigo-600">🧭</div>
+          <h3 class="text-xl font-semibold mb-2">Built From Real Experience</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Every feature comes from something we’ve had to fix in real offices,  
+            not from theory or templates.
+          </p>
+        </div>
+
+        <div class="bg-white shadow-lg rounded-xl p-8 border border-gray-200 text-center">
+          <div class="text-4xl mb-4 text-indigo-600">⚡</div>
+          <h3 class="text-xl font-semibold mb-2">Zero Guessing</h3>
+          <p class="text-gray-600 leading-relaxed">
+            We show what’s actually happening inside your network —  
+            before users complain.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Why It Matters -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">Why PeakUptime Matters</h2>
+
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Coworking spaces run on trust.  
+        When the WiFi drops, productivity drops — instantly.
+      </p>
+      <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+        We built PeakUptime so admins can stay ahead of issues,  
+        not react after members complain.
+      </p>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-100 py-6 mt-12 text-center text-sm text-gray-500">
+  <footer class="bg-gray-100 py-6 text-center text-sm text-gray-500">
     © <span id="year"></span> PeakUptime.io — All rights reserved.
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
 </body>
