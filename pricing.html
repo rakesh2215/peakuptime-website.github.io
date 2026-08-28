@@ -18,7 +18,6 @@
       .then(html => {
         document.getElementById('header-placeholder').innerHTML = html;
 
-        // Re-bind after injection
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const productsBtn = document.getElementById('mobile-products-btn');
@@ -77,11 +76,15 @@
 
         <div class="text-3xl font-extrabold">
           ₹5,999
-          <span class="text-lg font-medium text-gray-500"> /mo</span>
+          <span class="text-lg font-medium text-gray-500"> /mo per location</span>
         </div>
 
         <div class="mt-2 text-gray-600">
-          <strong>₹24,999</strong> one-time hardware cost
+          <strong>₹24,999 per location</strong> hardware cost
+        </div>
+
+        <div class="mt-1 text-sm text-gray-500">
+          Includes 1-year replacement warranty
         </div>
       </div>
 
@@ -108,13 +111,14 @@
 
 
       <!-- Features -->
-      <ul class="text-left text-sm text-gray-600 mb-8 space-y-2 max-w-xs mx-auto">
+      <ul class="text-left text-sm text-gray-600 mb-8 space-y-2 max-w-sm mx-auto">
         <li>✔ Multi-gigabit throughput (2.5G/5G-ready)</li>
         <li>✔ Dual-WAN & policy routing</li>
         <li>✔ Per-user bandwidth control</li>
         <li>✔ Proactive WhatsApp alerts</li>
         <li>✔ Zero-touch cloud provisioning</li>
         <li>✔ All Monitoring features included</li>
+        <li>✔ End-to-end network remote troubleshooting support</li>
       </ul>
 
 
@@ -147,10 +151,10 @@
 
       <div class="text-3xl font-extrabold mb-6">
         ₹2,999
-        <span class="text-lg font-medium text-gray-500"> /mo</span>
+        <span class="text-lg font-medium text-gray-500"> /mo per location</span>
       </div>
 
-      <ul class="text-left text-sm text-gray-600 mb-6 space-y-2 max-w-xs mx-auto">
+      <ul class="text-left text-sm text-gray-600 mb-6 space-y-2 max-w-sm mx-auto">
         <li>✔ ISP uptime & SLA tracking</li>
         <li>✔ Access point health & client load</li>
         <li>✔ CCTV/NVR online status</li>
@@ -199,7 +203,7 @@
             <td class="py-3 px-4">Monthly price</td>
 
             <td class="py-3 px-4 font-semibold text-indigo-600">
-              ₹5,999/mo
+              ₹5,999/mo/location
               <br>
               <span class="text-sm">
                 ₹5,499/mo/location for 4+ locations
@@ -207,7 +211,7 @@
             </td>
 
             <td class="py-3 px-4 font-semibold text-indigo-600">
-              ₹2,999/mo
+              ₹2,999/mo/location
             </td>
           </tr>
 
@@ -216,10 +220,14 @@
             <td class="py-3 px-4">Hardware cost</td>
 
             <td class="py-3 px-4">
-              ₹24,999 one-time
+              ₹24,999 per location
+              <br>
+              <span class="text-sm text-gray-500">
+                1-year replacement warranty
+              </span>
               <br>
               <span class="font-semibold text-indigo-600">
-                4+ locations: included at no cost
+                4+ locations: included at no cost for the lifetime of the service
               </span>
             </td>
 
@@ -235,11 +243,13 @@
             <td class="py-3 px-4">—</td>
           </tr>
 
+
           <tr>
             <td class="py-3 px-4">Dual-WAN / Failover</td>
             <td class="py-3 px-4">✔</td>
             <td class="py-3 px-4">—</td>
           </tr>
+
 
           <tr>
             <td class="py-3 px-4">Per-user controls</td>
@@ -247,11 +257,13 @@
             <td class="py-3 px-4">✔ Usage reports</td>
           </tr>
 
+
           <tr>
             <td class="py-3 px-4">Access point health</td>
             <td class="py-3 px-4">✔</td>
             <td class="py-3 px-4">✔ Detailed monitoring</td>
           </tr>
+
 
           <tr>
             <td class="py-3 px-4">CCTV / NVR monitoring</td>
@@ -259,16 +271,25 @@
             <td class="py-3 px-4">✔</td>
           </tr>
 
+
           <tr>
             <td class="py-3 px-4">ISP uptime & SLA</td>
             <td class="py-3 px-4">✔</td>
             <td class="py-3 px-4">✔</td>
           </tr>
 
+
           <tr>
             <td class="py-3 px-4">Proactive alerts</td>
             <td class="py-3 px-4">✔ WhatsApp notifications</td>
             <td class="py-3 px-4">✔ WhatsApp notifications</td>
+          </tr>
+
+
+          <tr>
+            <td class="py-3 px-4">Remote troubleshooting support</td>
+            <td class="py-3 px-4">✔ End-to-end network</td>
+            <td class="py-3 px-4">—</td>
           </tr>
 
         </tbody>
@@ -280,16 +301,50 @@
   </section>
 
 
-  <!-- Pricing Note -->
+  <!-- Multi-location Offer -->
   <section class="max-w-4xl mx-auto px-4 pb-12">
+
     <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-6 text-center">
+
       <p class="text-gray-700">
         Deploying across <strong>4 or more locations?</strong>
         Hardware is included at no cost for the lifetime of the service,
         and firewall pricing drops to
-        <strong class="text-indigo-600">₹5,499/month per location</strong>.
+        <strong class="text-indigo-600">
+          ₹5,499/month per location
+        </strong>.
       </p>
+
     </div>
+
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-white">
+
+    <div class="max-w-4xl mx-auto px-4 text-center">
+
+      <h3 class="text-2xl font-bold mb-4">
+        Let’s Talk
+      </h3>
+
+      <p class="text-gray-600 mb-6">
+        Fastest way to reach us — WhatsApp. We reply within minutes.
+      </p>
+
+      <a
+        href="https://wa.me/919538155667?text=Hi%20PeakUptime%20—%20I%27m%20interested%20in%20your%20plans"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition"
+      >
+        <span>💬</span>
+        <span>Chat on WhatsApp</span>
+      </a>
+
+    </div>
+
   </section>
 
 
@@ -299,7 +354,7 @@
   </footer>
 
 
-  <!-- Sticky WhatsApp Bubble -->
+  <!-- Sticky WhatsApp -->
   <a
     href="https://wa.me/919538155667?text=Hi%20PeakUptime%20—%20I%27m%20interested%20in%20your%20plans"
     target="_blank"
